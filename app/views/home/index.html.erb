@@ -1,0 +1,12 @@
+<div class="container">
+  <% @coins %>
+  <% for x in @coins %>
+    <% for coin in @my_coins %>
+      <% if coin == x["symbol"] %>
+        <%= x["name"] %>: $<%= x["price_usd"] %><br>
+        Rank: <%= x["rank"] %> <br>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
