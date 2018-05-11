@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= favicon_link_tag 'favicon.ico' %>
-    <title>Coinfolio</title>
+    <title>Coin Tracker</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,6 +14,7 @@
 
   <body>
     <%= render "shared/application_nav"%>
+    <%= render "shared/flash"%>
     <%= yield %>
   </body>
 </html>

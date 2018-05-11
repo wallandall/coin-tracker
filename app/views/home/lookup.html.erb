@@ -1,0 +1,23 @@
+<div class="container anchor">
+  <h1>Search</h1>
+
+  <div class="search-form">
+    <%= form_tag home_lookup_path, :method => 'POST' do %>
+      <div class="form-group">
+        <label for "search-symbol">Available Currencies: BTC, XRP, ADA, XLM, STEEM</label>
+        <%= text_field_tag 'sym', nil, class: 'form-control',  id: 'seach-symbol', placeholder: 'Enter Crypto Symbol' %>
+      </div>
+      <%= submit_tag 'Lookup Stock Quote' , class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+  <div class="search-results">
+    <% if @symbol %>
+      <% for x in @lookup_coin %>
+        <% if @symbol == x["symbol"] %>
+            <%= x["name"] %>: $<%= x["price_usd"] %><br/>
+            Rank: <%= x["rank"] %><br/><br/>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
