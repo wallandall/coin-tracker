@@ -9,6 +9,9 @@ class HomeController < ApplicationController
     @my_coins = ["BTC", "XRP", "ADA", "XLM", "STEEM", ]
   end
   
+  def about
+  end
+  
   def lookup
     require 'net/http'
     require 'json'
