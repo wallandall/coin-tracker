@@ -51,4 +51,4 @@ production:
   <<: *default
   database: coin-tracker_
   username: coin-tracker
-  password: <%= ENV['CRYTOFOLIO_DATABASE_PASSWORD'] %>
+  password: F3ifu2%6
