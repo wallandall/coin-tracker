@@ -16,6 +16,7 @@ default: &default
   username: root
   password:
 
+
 development:
   <<: *default
   database: c9
@@ -50,4 +51,4 @@ production:
   <<: *default
   database: coin-tracker_
   username: coin-tracker
-  password: F3ifu2%6
+  password: <%= ENV['CRYTOFOLIO_DATABASE_PASSWORD'] %>
